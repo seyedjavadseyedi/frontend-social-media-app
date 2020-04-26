@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from '../../shared/components/formElements/Button'
+
 
 const PostItem = ({ id, image, title, description, creatorId }) => {
   return (
@@ -11,7 +13,7 @@ const PostItem = ({ id, image, title, description, creatorId }) => {
         <p>{description}</p>
       </div>
       <div>
-          <button>حذف پست</button>
+          <Button>حذف پست</Button>
       </div>
     </li>
   )

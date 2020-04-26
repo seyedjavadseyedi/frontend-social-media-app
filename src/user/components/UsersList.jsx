@@ -14,7 +14,7 @@ const UsersList = ({ items }) => {
     <div>
       <ul>
         {items.map(({ id, image, name, posts }) => (
-          <UserItem key={id} image={image} name={name} postCount={posts} />
+          <UserItem key={id} id={id} image={image} name={name} postCount={posts} />
         ))}
       </ul>
     </div>

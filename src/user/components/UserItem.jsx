@@ -1,13 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const UserItem = ({ image, name, postCount }) => {
+const UserItem = ({ id, image, name, postCount }) => {
   return (
     <li>
-      <div>
-        <img src={image} alt={name} />
-      </div>
-      <span>{name}</span>
-      <span>{postCount}</span>
+      <Link to={`/${id}/posts`}>
+        <div>
+          <img src={image} alt={name} />
+        </div>
+        <p>{name}</p>
+        <p>{postCount}</p>
+      </Link>
     </li>
   )
 }

@@ -14,6 +14,7 @@ import {
 } from 'react-router-dom'
 
 // components
+import MainNavigation from './shared/components/navigation/MainNavigation'
 import NewPost from './posts/pages/NewPost'
 import Users from './user/pages/Users'
 
@@ -22,6 +23,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <RTLConfig>
         <Router>
+          <MainNavigation />
           <Switch>
             <Route path='/' exact>
               <Users />

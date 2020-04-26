@@ -1,5 +1,6 @@
 import React from 'react'
 import PostList from '../components/PostList'
+import {useParams} from 'react-router-dom'
 
 const posts = [
     {
@@ -19,8 +20,10 @@ const posts = [
 ]
 
 const UserPosts = () => {
+    const userId = useParams().userId
+    const userPosts = posts.filter(userPost => userPost.creator === userId)
     return (
-        <PostList items={posts} />
+        <PostList items={userPosts} />
     )
 }
 

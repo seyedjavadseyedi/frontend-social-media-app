@@ -17,6 +17,7 @@ import {
 import MainNavigation from './shared/components/navigation/MainNavigation'
 import NewPost from './posts/pages/NewPost'
 import Users from './user/pages/Users'
+import UserPosts from './posts/pages/UserPosts'
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           <Switch>
             <Route path='/' exact>
               <Users />
+            </Route>
+            <Route path='/:userId/posts' exact>
+              <UserPosts />
             </Route>
             <Route path='/posts/new' exact>
               <NewPost />

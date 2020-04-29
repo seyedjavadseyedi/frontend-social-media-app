@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Button = ({ href, to, exact, type, onClick, children }) => {
+const Button = ({ href, to, exact, type, onClick, children, disabled }) => {
   if (href) {
     return (
       <a href={href} className={`button`}>
@@ -18,7 +18,7 @@ const Button = ({ href, to, exact, type, onClick, children }) => {
   }
 
   return (
-    <button type={type} onClick={onClick} className={`button`}>
+    <button type={type} onClick={onClick} className={`button`} disabled={disabled}>
       {children}
     </button>
   )

@@ -18,6 +18,7 @@ import MainNavigation from './shared/components/navigation/MainNavigation'
 import NewPost from './posts/pages/NewPost'
 import Users from './user/pages/Users'
 import UserPosts from './posts/pages/UserPosts'
+import Auth from './user/pages/Auth'
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
             </Route>
             <Route path='/posts/new' exact>
               <NewPost />
+            </Route>
+            <Route path='/auth' exact>
+              <Auth />
             </Route>
             <Redirect to='/' />
           </Switch>
